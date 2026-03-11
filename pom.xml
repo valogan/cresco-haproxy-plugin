@@ -5,19 +5,19 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>io.cresco</groupId>
-    <artifactId>stunnel</artifactId>
+    <artifactId>haproxy</artifactId>
     <version>1.2-SNAPSHOT</version>
 
 
-    <name>Cresco Repo</name>
-    <description>Cresco framework plugin repo</description>
-    <url>https://github.com/CrescoEdge/stunnel</url>
+    <name>HA-Proxy Plugin</name>
+    <description>HA-Proxy Cresco Plugin</description>
+    <url>https://github.com/CrescoEdge/haproxy</url>
 
     <licenses>
         <license>
             <name>Apache License, Version 2.0</name>
             <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
-            <distribution>stunnel</distribution>
+            <distribution>haproxy</distribution>
         </license>
     </licenses>
 
@@ -35,9 +35,9 @@
 
 
     <scm>
-        <connection>scm:git:git://github.com/CrescoEdge/stunnel.git</connection>
-        <developerConnection>scm:git:git://github.com/CrescoEdge/stunnel.git</developerConnection>
-        <url>git@github.com:CrescoEdge/stunnel.git</url>
+        <connection>scm:git:git://github.com/CrescoEdge/haproxy.git</connection>
+        <developerConnection>scm:git:git://github.com/CrescoEdge/haproxy.git</developerConnection>
+        <url>git@github.com:CrescoEdge/haproxy.git</url>
     </scm>
 
 
@@ -118,48 +118,6 @@
             <scope>provided</scope>
         </dependency>
 
-        <dependency>
-            <groupId>io.netty</groupId>
-            <artifactId>netty-buffer</artifactId>
-            <version>${netty.version}</version>
-            <scope>provided</scope>
-        </dependency>
-
-        <dependency>
-            <groupId>io.netty</groupId>
-            <artifactId>netty-common</artifactId>
-            <version>${netty.version}</version>
-            <scope>provided</scope>
-        </dependency>
-
-        <dependency>
-            <groupId>io.netty</groupId>
-            <artifactId>netty-resolver</artifactId>
-            <version>${netty.version}</version>
-            <scope>provided</scope>
-        </dependency>
-
-        <dependency>
-            <groupId>io.netty</groupId>
-            <artifactId>netty-handler</artifactId>
-            <version>${netty.version}</version>
-            <scope>provided</scope>
-        </dependency>
-
-        <dependency>
-            <groupId>io.netty</groupId>
-            <artifactId>netty-transport</artifactId>
-            <version>${netty.version}</version>
-            <scope>provided</scope>
-        </dependency>
-
-        <dependency>
-            <groupId>io.netty</groupId>
-            <artifactId>netty-codec</artifactId>
-            <version>${netty.version}</version>
-            <scope>provided</scope>
-        </dependency>
-
     </dependencies>
 
     <build>
@@ -183,11 +141,11 @@
                 <configuration>
                     <instructions>
                         <Bundle-SymbolicName>${project.groupId}.${project.artifactId}</Bundle-SymbolicName>
-                        <Bundle-Name>sTunnel</Bundle-Name>
-                        <Bundle-Description>sTunnel Plugin</Bundle-Description>
+                        <Bundle-Name>HA-Proxy</Bundle-Name>
+                        <Bundle-Description>HA-Proxy Plugin</Bundle-Description>
                         <Bundle-Vendor>Cresco.io</Bundle-Vendor>
                         <Bundle-Version>${project.version}-${maven.build.timestamp}</Bundle-Version>
-                        <Bundle-Activator>io.cresco.stunnel.Activator</Bundle-Activator>
+                        <Bundle-Activator>io.cresco.haproxy.Activator</Bundle-Activator>
                         <Import-Package>*;resolution:=optional</Import-Package>
                         <Embed-Dependency>!org.osgi.*;!osgi.cmpn.*;!library;*</Embed-Dependency>
                         <Bundle-RequiredExecutionEnvironment>JavaSE-1.8</Bundle-RequiredExecutionEnvironment>
